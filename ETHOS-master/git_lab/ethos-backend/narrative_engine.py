@@ -42,9 +42,9 @@ Write a short, meaningful narrative from the victim's perspective:
 
     try:
         response = client.models.generate_content(
-            model="models/gemini-2.5-flash",
-            contents=prompt
-        )
+        model="gemini-2.5-flash-lite",
+        contents=prompt
+)
 
         return response.text.strip()
 
