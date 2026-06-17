@@ -1,9 +1,30 @@
 export interface Session {
   id: string
-  text: string
-  emotion: string
+
+  text?: string
+  emotion?: string
+  date?: string
+
+  sentiment: string
+  scenario: string
+  timestamp: string
+
   score: number
-  date: string
+}
+
+
+export interface SessionStats {
+  totalSessions: number
+  averageScore: number
+
+  sentimentBreakdown: {
+    remorseful: number
+    defensive: number
+    neutral: number
+  }
+
+  trend: "improving" | "declining" | "stable"
+  trendPercentage: number
 }
 
 const STORAGE_KEY = "ethos_sessions"
