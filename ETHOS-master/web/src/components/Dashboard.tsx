@@ -278,7 +278,7 @@ export default function Dashboard({ onStartNew }: DashboardProps) {
 
                 <div className="flex justify-end mt-4">
                     <button
-                        onClick={() => window.open("http://localhost:8000/download-report")}
+                        onClick={() => window.open("https://ethos-ai-backend-eani.onrender.com/download-report")}
                         className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition"
                     >
                         Download PDF Report

@@ -53,8 +53,8 @@ useEffect(() => {
         if (!scenario.trim()) return
         setLoadingNarrative(true)
         try {
-            const response = await axios.post("http://localhost:8000/generate-narrative", {
-                scenario,
+            const response = await axios.post("https://ethos-ai-backend-eani.onrender.com/generate-narrative", {
+    scenario,
             })
             setNarrative(response.data.narrative)
             setStep(2)
@@ -70,8 +70,8 @@ useEffect(() => {
         if (!reflection.trim()) return
         setLoadingAnalysis(true)
         try {
-            const response = await axios.post("http://localhost:8000/analyze-reflection", {
-                reflection,
+            const response = await axios.post("https://ethos-ai-backend-eani.onrender.com/analyze-reflection", {
+    reflection,
             })
             setAnalysis(response.data)
 
